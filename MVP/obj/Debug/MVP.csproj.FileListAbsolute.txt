@@ -1,0 +1,15 @@
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\MVP.exe.config
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\MVP.exe
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\MVP.pdb
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\EntityFramework.dll
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\EntityFramework.xml
+C:\Users\t.novruzov\source\repos\MVP\MVP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.csprojAssemblyReference.cache
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.Properties.Resources.resources
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.Views.MainView.resources
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.csproj.GenerateResource.cache
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.csproj.CoreCompileInputs.cache
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.csproj.CopyComplete
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.exe
+C:\Users\t.novruzov\source\repos\MVP\MVP\obj\Debug\MVP.pdb
