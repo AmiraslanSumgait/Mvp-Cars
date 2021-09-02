@@ -20,8 +20,6 @@ namespace MVP.Views
 
         public EventHandler<EventArgs> AddButtonClicked { get; set; }
         public EventHandler<EventArgs> LoadButtonClicked { get; set; }
-
-
         public string VendorText
         {
             get => txtBoxVendor.Text;
@@ -51,8 +49,6 @@ namespace MVP.Views
             get => txtBoxTransmission.Text;
             set => txtBoxTransmission.Text = value;
         }
-
-
         public List<Car> Cars
         {
             set
@@ -60,8 +56,6 @@ namespace MVP.Views
                 listBoxCar.DataSource = value;
             }
         }
-
-
         public List<string> Colors
         {
             set
@@ -69,9 +63,6 @@ namespace MVP.Views
                 comboBoxColor.DataSource = value;
             }
         }
-
-
-
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             AddButtonClicked.Invoke(sender, e);

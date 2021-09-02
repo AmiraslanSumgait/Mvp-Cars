@@ -18,11 +18,8 @@ namespace MVP.Presenters
         {
             _view = view;
             _carContext = new CarContext();
-
             _view.AddButtonClicked += ViewAddButtonClicked;
             _view.LoadButtonClicked += ViewLoadButtonClicked;
-
-
             List<string> colors = new List<string>
             {
                 "Green",
@@ -31,7 +28,6 @@ namespace MVP.Presenters
             };
             _view.Colors = colors;
         }
-
         private void ViewAddButtonClicked(object sender, EventArgs e)
         {
             Car car = new Car
@@ -42,15 +38,12 @@ namespace MVP.Presenters
                 Color = _view.ColorText,
                 Transmission = _view.TransmissionText
             };
-
             _carContext.Cars.Add(car);
             _carContext.SaveChanges();
         }
-
         private void ViewLoadButtonClicked(object sender, EventArgs e)
         {
             _view.Cars = _carContext.Cars.ToList();
         }
-
     }
 }
