@@ -33,14 +33,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtBoxVendor = new System.Windows.Forms.TextBox();
-            this.txtBoxModel = new System.Windows.Forms.TextBox();
-            this.txtBoxYear = new System.Windows.Forms.TextBox();
-            this.txtBoxTransmission = new System.Windows.Forms.TextBox();
             this.listBoxCar = new System.Windows.Forms.ListBox();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.btnLoadCars = new System.Windows.Forms.Button();
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
+            this.cbxVendor = new System.Windows.Forms.ComboBox();
+            this.cbxModel = new System.Windows.Forms.ComboBox();
+            this.cbxYears = new System.Windows.Forms.ComboBox();
+            this.cbxTransmission = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -93,46 +93,14 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Transmission";
             // 
-            // txtBoxVendor
-            // 
-            this.txtBoxVendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxVendor.Location = new System.Drawing.Point(374, 51);
-            this.txtBoxVendor.Name = "txtBoxVendor";
-            this.txtBoxVendor.Size = new System.Drawing.Size(203, 47);
-            this.txtBoxVendor.TabIndex = 5;
-            // 
-            // txtBoxModel
-            // 
-            this.txtBoxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxModel.Location = new System.Drawing.Point(374, 151);
-            this.txtBoxModel.Name = "txtBoxModel";
-            this.txtBoxModel.Size = new System.Drawing.Size(203, 47);
-            this.txtBoxModel.TabIndex = 6;
-            // 
-            // txtBoxYear
-            // 
-            this.txtBoxYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxYear.Location = new System.Drawing.Point(374, 376);
-            this.txtBoxYear.Name = "txtBoxYear";
-            this.txtBoxYear.Size = new System.Drawing.Size(203, 47);
-            this.txtBoxYear.TabIndex = 8;
-            // 
-            // txtBoxTransmission
-            // 
-            this.txtBoxTransmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxTransmission.Location = new System.Drawing.Point(374, 483);
-            this.txtBoxTransmission.Name = "txtBoxTransmission";
-            this.txtBoxTransmission.Size = new System.Drawing.Size(203, 47);
-            this.txtBoxTransmission.TabIndex = 9;
-            // 
             // listBoxCar
             // 
-            this.listBoxCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxCar.FormattingEnabled = true;
-            this.listBoxCar.ItemHeight = 37;
+            this.listBoxCar.ItemHeight = 20;
             this.listBoxCar.Location = new System.Drawing.Point(727, 46);
             this.listBoxCar.Name = "listBoxCar";
-            this.listBoxCar.Size = new System.Drawing.Size(343, 485);
+            this.listBoxCar.Size = new System.Drawing.Size(343, 464);
             this.listBoxCar.TabIndex = 10;
             // 
             // btnAddCar
@@ -165,26 +133,59 @@
             // 
             // comboBoxColor
             // 
-            this.comboBoxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxColor.FormattingEnabled = true;
             this.comboBoxColor.Location = new System.Drawing.Point(374, 266);
             this.comboBoxColor.Name = "comboBoxColor";
-            this.comboBoxColor.Size = new System.Drawing.Size(203, 47);
+            this.comboBoxColor.Size = new System.Drawing.Size(203, 33);
             this.comboBoxColor.TabIndex = 13;
+            // 
+            // cbxVendor
+            // 
+            this.cbxVendor.FormattingEnabled = true;
+            this.cbxVendor.Location = new System.Drawing.Point(374, 70);
+            this.cbxVendor.Name = "cbxVendor";
+            this.cbxVendor.Size = new System.Drawing.Size(201, 28);
+            this.cbxVendor.TabIndex = 14;
+            this.cbxVendor.SelectedIndexChanged += new System.EventHandler(this.cbxVendor_SelectedIndexChanged);
+            // 
+            // cbxModel
+            // 
+            this.cbxModel.FormattingEnabled = true;
+            this.cbxModel.Location = new System.Drawing.Point(374, 170);
+            this.cbxModel.Name = "cbxModel";
+            this.cbxModel.Size = new System.Drawing.Size(201, 28);
+            this.cbxModel.TabIndex = 15;
+            // 
+            // cbxYears
+            // 
+            this.cbxYears.FormattingEnabled = true;
+            this.cbxYears.Location = new System.Drawing.Point(374, 381);
+            this.cbxYears.Name = "cbxYears";
+            this.cbxYears.Size = new System.Drawing.Size(201, 28);
+            this.cbxYears.TabIndex = 16;
+            // 
+            // cbxTransmission
+            // 
+            this.cbxTransmission.FormattingEnabled = true;
+            this.cbxTransmission.Location = new System.Drawing.Point(374, 502);
+            this.cbxTransmission.Name = "cbxTransmission";
+            this.cbxTransmission.Size = new System.Drawing.Size(201, 28);
+            this.cbxTransmission.TabIndex = 17;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 693);
+            this.Controls.Add(this.cbxTransmission);
+            this.Controls.Add(this.cbxYears);
+            this.Controls.Add(this.cbxModel);
+            this.Controls.Add(this.cbxVendor);
             this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.btnLoadCars);
             this.Controls.Add(this.btnAddCar);
             this.Controls.Add(this.listBoxCar);
-            this.Controls.Add(this.txtBoxTransmission);
-            this.Controls.Add(this.txtBoxYear);
-            this.Controls.Add(this.txtBoxModel);
-            this.Controls.Add(this.txtBoxVendor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,13 +207,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtBoxVendor;
-        private System.Windows.Forms.TextBox txtBoxModel;
-        private System.Windows.Forms.TextBox txtBoxYear;
-        private System.Windows.Forms.TextBox txtBoxTransmission;
         private System.Windows.Forms.ListBox listBoxCar;
         private System.Windows.Forms.Button btnAddCar;
         private System.Windows.Forms.Button btnLoadCars;
         private System.Windows.Forms.ComboBox comboBoxColor;
+        private System.Windows.Forms.ComboBox cbxVendor;
+        private System.Windows.Forms.ComboBox cbxModel;
+        private System.Windows.Forms.ComboBox cbxYears;
+        private System.Windows.Forms.ComboBox cbxTransmission;
     }
 }

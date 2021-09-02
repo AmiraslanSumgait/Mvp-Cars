@@ -16,11 +16,8 @@ namespace MVP
         [STAThread]
         static void Main()
         {
-            //path
-            Application.EnableVisualStyles();
+            //path7tion.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-
             var view = new MainView();
             var presenter = new MainPresenter(view);
             Application.Run(view);

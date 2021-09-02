@@ -12,6 +12,7 @@ namespace MVP.Views
     {
         EventHandler<EventArgs> AddButtonClicked { get; set; }
         EventHandler<EventArgs> LoadButtonClicked { get; set; }
+        EventHandler<EventArgs> VendorIndexChanged { get; set; }
         string VendorText { get; set; }
         string ModelText { get; set; }
         string ColorText { get; set; }
@@ -19,5 +20,9 @@ namespace MVP.Views
         string TransmissionText { get; set; }
         List<Car> Cars { set; }
         List<string> Colors { set; }
+        List<string> Vendors { set; }
+        List<string> Models { set; }
+        List<int> Years { set; }
+        List<string> Transmissions { set; }
     }
 }

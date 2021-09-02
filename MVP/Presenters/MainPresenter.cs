@@ -20,13 +20,17 @@ namespace MVP.Presenters
             _carContext = new CarContext();
             _view.AddButtonClicked += ViewAddButtonClicked;
             _view.LoadButtonClicked += ViewLoadButtonClicked;
-            List<string> colors = new List<string>
-            {
-                "Green",
-                "Blue",
-                "Red"
-            };
+            _view.VendorIndexChanged += ViewVendorIndexChanged;
+            List<string> colors = new List<string>();
+            List<string> vendors = new List<string>();
+            List<int> years = new List<int>();
+            _view.Transmissions = new List<string> { "Manual", "Automatic" };
+            vendors.Add("Bmw");
+            vendors.Add("Mercedes");
+            vendors.Add("Ford");
+            _view.Vendors = vendors;
             _view.Colors = colors;
+            _view.Years = years;
         }
         private void ViewAddButtonClicked(object sender, EventArgs e)
         {
@@ -44,6 +48,33 @@ namespace MVP.Presenters
         private void ViewLoadButtonClicked(object sender, EventArgs e)
         {
             _view.Cars = _carContext.Cars.ToList();
+        }
+        private void ViewVendorIndexChanged(object sender, EventArgs e)
+        {
+            if (_view.VendorText == "Bmw")
+            {
+                List<string> models = new List<string>();
+                models.Add("M4 Coupe");
+                models.Add("M4 Competition Convertible");
+                models.Add("THE X6 M");
+                _view.Models = models;
+            }
+            else if (_view.VendorText == "Mercedes")
+            {
+                List<string> models = new List<string>();
+                models.Add("G-Class");
+                models.Add("AMG GT");
+                models.Add("CLA");
+                _view.Models = models;
+            }
+            else if (_view.VendorText == "Ford")
+            {
+                List<string> models = new List<string>();
+                models.Add("Focus");
+                models.Add("Mustang");
+                models.Add("Bronco");
+                _view.Models = models;
+            }
         }
     }
 }

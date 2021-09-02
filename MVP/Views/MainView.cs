@@ -17,19 +17,20 @@ namespace MVP.Views
         {
             InitializeComponent();
         }
-
         public EventHandler<EventArgs> AddButtonClicked { get; set; }
         public EventHandler<EventArgs> LoadButtonClicked { get; set; }
+        public EventHandler<EventArgs> VendorIndexChanged { get; set; }
+       
         public string VendorText
         {
-            get => txtBoxVendor.Text;
-            set => txtBoxVendor.Text = value;
+            get => cbxVendor.Text;
+            set => cbxVendor.Text = value;
         }
 
         public string ModelText
         {
-            get => txtBoxModel.Text;
-            set => txtBoxModel.Text = value;
+            get => cbxModel.Text;
+            set => cbxModel.Text = value;
         }
 
         public string ColorText
@@ -40,14 +41,13 @@ namespace MVP.Views
 
         public string YearText
         {
-            get => txtBoxYear.Text;
-            set => txtBoxYear.Text = value;
+            get => cbxYears.Text;
+            set => cbxYears.Text = value;
         }
-
         public string TransmissionText
         {
-            get => txtBoxTransmission.Text;
-            set => txtBoxTransmission.Text = value;
+            get => cbxTransmission.Text;
+            set => cbxTransmission.Text = value;
         }
         public List<Car> Cars
         {
@@ -60,18 +60,36 @@ namespace MVP.Views
         {
             set
             {
-                comboBoxColor.DataSource = value;
+                comboBoxColor.DataSource = typeof(Color).GetProperties()
+               .Where(x => x.PropertyType == typeof(Color))
+               .Select(x => x.GetValue(null)).ToList(); 
             }
         }
+
+       public List<string> Vendors { set => cbxVendor.DataSource=value; }
+        public List<string> Models { set => cbxModel.DataSource = value; }
+        public List<int> Years
+        {
+            set
+            {
+                for (int i = 1950; i <= 2050; i++)
+                {
+                    cbxYears.Items.Add(i);
+                }
+            }
+        }
+        public List<string> Transmissions { set => cbxTransmission.DataSource=value; }
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             AddButtonClicked.Invoke(sender, e);
         }
-
         private void btnLoadCars_Click(object sender, EventArgs e)
         {
             LoadButtonClicked.Invoke(sender, e);
         }
-
+        private void cbxVendor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VendorIndexChanged.Invoke(sender, e);
+        }
     }
 }
