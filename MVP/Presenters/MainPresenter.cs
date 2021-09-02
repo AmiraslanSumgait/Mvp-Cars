@@ -53,26 +53,17 @@ namespace MVP.Presenters
         {
             if (_view.VendorText == "Bmw")
             {
-                List<string> models = new List<string>();
-                models.Add("M4 Coupe");
-                models.Add("M4 Competition Convertible");
-                models.Add("THE X6 M");
+                List<string> models = new List<string> { "M4 Coupe", "M4 Competition Convertible","THE X6 M","M5","M6" };
                 _view.Models = models;
             }
             else if (_view.VendorText == "Mercedes")
             {
-                List<string> models = new List<string>();
-                models.Add("G-Class");
-                models.Add("AMG GT");
-                models.Add("CLA");
+                List<string> models = new List<string> { "G-Class", "AMG GT", "CLA","EQ","GLB" };
                 _view.Models = models;
             }
             else if (_view.VendorText == "Ford")
             {
-                List<string> models = new List<string>();
-                models.Add("Focus");
-                models.Add("Mustang");
-                models.Add("Bronco");
+                List<string> models = new List<string> { "Focus", "Mustang", "Bronco","Edge","Super Duty" };
                 _view.Models = models;
             }
         }
